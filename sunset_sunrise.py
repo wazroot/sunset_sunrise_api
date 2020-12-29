@@ -21,20 +21,20 @@ while True:
     
     
     postal = input('Give your postal code and country ID(e.g 20810,FI)?: ')
-    print('=======================================================================')
+    #print('=======================================================================')
     #sunset sunrise api + user input(lat & lng)     
     url = riseset_api_url + urllib.parse.urlencode({'lat':lat, 'lng':lng})
-    print('URL: ' + url) 
+    #print('URL: ' + url) 
     
-    print('=======================================================================')
+    #print('=======================================================================')
     #TimeZone api + lat&lng
     url_one = zonedb_api + urllib.parse.urlencode({'lat':lat, 'lng':lng})
-    print('URL: ' + url_one) 
-    print('=======================================================================')
+    #print('URL: ' + url_one) 
+    #print('=======================================================================')
     #Postal code url parse
     
     url_two = postal_api + urllib.parse.urlencode({'query' : postal})
-    print('URL: ' + url_two) 
+    #print('URL: ' + url_two) 
     print('========================================================================')
     #data in json for lat&lng
     json_data = requests.get(url).json()
